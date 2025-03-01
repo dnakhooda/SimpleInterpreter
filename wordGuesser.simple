@@ -1,0 +1,27 @@
+text setWord = ( "dog" );
+
+repeat ( 10 ) i; then;
+
+    text word;
+
+    printLine ( "Guess My Word (Type All Letters In Lowercase): " );
+
+    input word;
+
+    if ( word == setWord ); then;
+        printLine ( "You Got It!" );
+        exit;
+        end;
+
+    else; then;
+
+        if ( i < 10 ); then;
+            printLine ( "Try Again!" );
+            end;
+        else; then;
+            printLine ( "The word was " + setWord );
+            end;
+
+        end;
+
+    end;

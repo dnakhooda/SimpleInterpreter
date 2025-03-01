@@ -1,0 +1,8 @@
+printLine ( "Hello!" );
+
+text name = ( "" );
+
+print ( "Type your name: " );
+input name;
+
+printLine ( "Hello " + name + "!" );

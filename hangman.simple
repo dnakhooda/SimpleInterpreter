@@ -1,0 +1,165 @@
+text word = ( "octopus" );
+
+text character1 = ( "" );
+text character2 = ( "" );
+text character3 = ( "" );
+text character4 = ( "" );
+text character5 = ( "" );
+text character6 = ( "" );
+text character7 = ( "" );
+
+printLine ( "Lets Play Hangman!" );
+printLine ( "" );
+
+repeat ( 7 ) i; then;
+
+    print ( "Type A Character Or Guess The Word (Guess In Lowercase): " );
+    text inputtedCharacter = ( "" );
+    input inputtedCharacter;
+
+    if ( i == 1 ); then;
+        character1 = ( inputtedCharacter );
+        end;
+
+    if ( i == 2 ); then;
+        character2 = ( inputtedCharacter );
+        end;
+
+    if ( i == 3 ); then;
+        character3 = ( inputtedCharacter );
+        end;
+
+    if ( i == 4 ); then;
+        character4 = ( inputtedCharacter );
+        end;
+
+    if ( i == 5 ); then;
+        character5 = ( inputtedCharacter );
+        end;
+
+    if ( i == 6 ); then;
+        character6 = ( inputtedCharacter );
+        end;
+
+    if ( i == 7 ); then;
+        character7 = ( inputtedCharacter );
+        end;
+
+    printLine ( "" );
+
+    if ( not ( ( length inputtedCharacter ) == 1 ) ); then;
+        if ( inputtedCharacter == word ); then;
+            printLine ( "You Got It Right! The Word Is " + word + "!" );
+            exit;
+            end;
+        else; then;
+            printLine ( "Incorrect!" );
+            end;
+        printLine ( "" );
+        end;
+
+    print ( "Word: " );
+
+    repeat ( length word ) j; then;
+        text character = ( "" );
+        characterAt character ( j ) ( word );
+
+        if ( ( character1 == character ) or ( character2 == character ) or ( character3 == character ) or ( character4 == character ) or ( character5 == character ) or ( character6 == character ) or ( character7 == character ) ); then;
+            print ( character );
+            end;
+        else; then;
+            print ( "_" );
+            end;
+
+        end;
+
+    printLine ( "" );
+    printLine ( "" );
+
+    if ( i == 1 ); then;
+        printLine ( "|---|---" );
+        printLine ( "|       " );
+        printLine ( "|       " );
+        printLine ( "|       " );
+        printLine ( "|       " );
+        printLine ( "|       " );
+        printLine ( "|       " );
+        printLine ( "|       " );
+        printLine ( "|       " );
+        end;
+
+    if ( i == 2 ); then;
+        printLine ( "|---|---" );
+        printLine ( "|  _|_  " );
+        printLine ( "| |   | " );
+        printLine ( "| |   | " );
+        printLine ( "|  ---  " );
+        printLine ( "|       " );
+        printLine ( "|       " );
+        printLine ( "|       " );
+        printLine ( "|       " );
+        end;
+
+    if ( i == 3 ); then;
+        printLine ( "|---|---" );
+        printLine ( "|  _|_  " );
+        printLine ( "| |   | " );
+        printLine ( "| |   | " );
+        printLine ( "|  ---  " );
+        printLine ( "|   |   " );
+        printLine ( "|   |   " );
+        printLine ( "|   |   " );
+        printLine ( "|       " );
+        end;
+
+    if ( i == 4 ); then;
+        printLine ( "|---|---" );
+        printLine ( "|  _|_  " );
+        printLine ( "| |   | " );
+        printLine ( "| |   | " );
+        printLine ( "|  ---  " );
+        printLine ( "|   |   " );
+        printLine ( "|   |   " );
+        printLine ( "|   |   " );
+        printLine ( "|    \  " );
+        end;
+
+    if ( i == 5 ); then;
+        printLine ( "|---|---" );
+        printLine ( "|  _|_  " );
+        printLine ( "| |   | " );
+        printLine ( "| |   | " );
+        printLine ( "|  ---  " );
+        printLine ( "|   |   " );
+        printLine ( "|   |   " );
+        printLine ( "|   |   " );
+        printLine ( "|  / \  " );
+        end;
+
+    if ( i == 6 ); then;
+        printLine ( "|---|---" );
+        printLine ( "|  _|_  " );
+        printLine ( "| |   | " );
+        printLine ( "| |   | " );
+        printLine ( "|  ---  " );
+        printLine ( "|   |   " );
+        printLine ( "| --|   " );
+        printLine ( "|   |   " );
+        printLine ( "|  / \  " );
+        end;
+
+    if ( i == 7 ); then;
+        printLine ( "|---|---" );
+        printLine ( "|  _|_  " );
+        printLine ( "| |   | " );
+        printLine ( "| |   | " );
+        printLine ( "|  ---  " );
+        printLine ( "|   |   " );
+        printLine ( "| --|-- " );
+        printLine ( "|   |   " );
+        printLine ( "|  / \  " );
+        end;
+
+    printLine ( "" );
+
+    end;

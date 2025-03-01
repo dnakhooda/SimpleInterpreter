@@ -1,0 +1,11 @@
+text hello = ( "hi" );
+
+bool yes = ( TRUE );
+
+num age = ( 19 );
+
+print ( hello );
+
+print ( yes );
+
+print ( age );
