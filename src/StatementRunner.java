@@ -19,46 +19,52 @@ public class StatementRunner {
                 throw new Error("No = Declaration!");
 
             switch (variableType) {
-                case num -> {
-                    Double value;
+                case num:
+                    Double valueNum;
 
                     if (tokens.get(0).equals("("))
-                        value = Double.valueOf(Main.expressionToEvaluate(tokens, variables));
+                        valueNum = Double.valueOf(Main.expressionToEvaluate(tokens, variables));
                     else
                         throw new Error("Number Variable Declaration Must Take In A Expression");
 
-                    variables.put(name, new Variable<>(name, value, Variable.VariableType.num));
-                }
+                    variables.put(name, new Variable<>(name, valueNum, Variable.VariableType.num));
+                    break;
 
-                case bool -> {
-                    boolean value;
+                case bool:
+                    boolean valueBoolean;
 
                     if (tokens.get(0).equals("("))
-                        value = Main.expressionToEvaluate(tokens, variables).equals("TRUE") ? true : false;
+                        valueBoolean = Main.expressionToEvaluate(tokens, variables).equals("TRUE") ? true : false;
                     else
                         throw new Error("Boolean Variable Declaration Must Take In A Expression");
 
-                    variables.put(name, new Variable<>(name, value, Variable.VariableType.bool));
-                }
+                    variables.put(name, new Variable<>(name, valueBoolean, Variable.VariableType.bool));
+                    break;
 
-                case text -> {
-                    String value;
+                case text:
+                    String valueText;
 
                     if (tokens.get(0).equals("("))
-                        value = Main.expressionToEvaluate(tokens, variables);
+                        valueText = Main.expressionToEvaluate(tokens, variables);
                     else
                         throw new Error("Text Variable Declaration Must Take In A Expression! Variable: " + name);
 
-                    value = value.substring(1, value.length() - 1);
-                    variables.put(name, new Variable<>(name, value, Variable.VariableType.text));
-                }
+                    valueText = valueText.substring(1, valueText.length() - 1);
+                    variables.put(name, new Variable<>(name, valueText, Variable.VariableType.text));
+                    break;
             }
         }
         else {
             switch (variableType) {
-                case num -> variables.put(name, new Variable<>(name, 0d, Variable.VariableType.num));
-                case bool -> variables.put(name, new Variable<>(name, false, Variable.VariableType.bool));
-                case text -> variables.put(name, new Variable<>(name, "", Variable.VariableType.text));
+                case num:
+                    variables.put(name, new Variable<>(name, 0d, Variable.VariableType.num));
+                    break;
+                case bool:
+                    variables.put(name, new Variable<>(name, false, Variable.VariableType.bool));
+                    break;
+                case text:
+                    variables.put(name, new Variable<>(name, "", Variable.VariableType.text));
+                    break;
             }
         }
     }
