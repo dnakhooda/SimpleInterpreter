@@ -1,7 +1,7 @@
 <h1>🖥️☕ Simple Interpreter ☕🖥️</h1>
 
 <p>
-  This is an interpreter written in Java for my custom programming language, which I named "Simple." My Simple programming language contains variables, if statements, loops and more.
+This is an interpreter written in Java for my custom programming language, which I named "Simple." The Simple language supports variables, if statements, loops, and more.
 </p>
 
 <h2>Demo 📹:</h2>
@@ -12,42 +12,42 @@
 
 <h2>How You Can Run It 🏃:</h2>
 
-Inside the executable folders, you will find SimpleInterpreter.jar. This jar can be used to run my interpeter. This interpreter was built in java, so you need Java installed in order to use this interpreter. After downloading SimpleInterpreter.java, open a terminal in the same folder as the jar. In that terminal run the following command: 
+Inside the executable folder, you’ll find `SimpleInterpreter.jar`. This JAR file can be used to run my interpreter. Since the interpreter is built in Java, you’ll need Java installed on your system.
+
+After downloading `SimpleInterpreter.jar`, open a terminal in the same folder as the JAR file and run the following command:
 ```
-java -jar SimpleInterpreter.java
+java -jar SimpleInterpreter.jar
 ```
 
-The interpreter will ask you for the name of the .simple file you want to interpret. This repository has the following example .simple programs that you can run: main.simple, greeting.simple, wordGuesser.simple, and hangman.simple. 
+The interpreter will prompt you for the name of the `.simple` file you want to run. This repository includes several example programs you can try: `main.simple`, `greeting.simple`, `wordGuesser.simple`, and `hangman.simple`.
 
 <h2>Simple Programming Language Features 🖥️: </h2>
 
 <h3>Variables: </h3>
 
-There are three types of variables in the Simple programming language:
-- num
-- text
-- bool
+There are three types of variables in Simple:
+- `num` – a number
+- `text` – a string of text
+- `bool` – a boolean value (`TRUE` or `FALSE`)
 
-num is Number; text is text or a string; bool is a boolean (TRUE or FALSE).
+Variables are declared by writing the type, the variable name, an equals sign, and an expression.
 
-Variables are declared by writing the variable type, the name of the variable, an equals sign, and then a expression.
-
-Below are example of each variable: 
+Here are some examples:
 ```
 text hello = ( "hi" );
 bool yes = ( TRUE );
 num age = ( 18 );
 ```
 
-⚠️ Note: It is important to know that the parenthesis are required when expressing data. The parathensis indicate to the interpreter that the following is an expression of information that may need to be evaluated. The spaces are also required.
+⚠️ Note: Parentheses are required around expressions. They tell the interpreter that the value should or could be evaluated. Spaces are also required.
 
-When writing text, be sure to wrap it within quotation marks (ex: "hi"). 
+Text values must be wrapped in quotation marks (e.g., `"hi"`).
 
-Every statement is ended with a semicolon (;).
+Every statement ends with a semicolon (`;`).
 
 <h3>If Statements: </h3>
 
-Below is an example of an if statement:
+Here’s an example of an if statement:
 
 ```
 num age = ( 30 );
@@ -59,13 +59,13 @@ else; then;
   end;
 ```
 
-Again, please be aware that the paranthesis after the if statement is required. Again, the spaces are required.
+⚠️ Be sure to include the parentheses in the expression after the `if` keyword, as well as spaces.
 
-After the "if" keyword and expression, there should be "then;" and "end;" statements. Anything between these statements is within the if statement. After the "end;" statement you can use the "else;" statement followed by a "then;" statement to create an else clause in the if statement. Be sure to close the else with a "end;" statement.
+Use `then;` to begin the if block and `end;` to close it. Optionally, you can include an `else; then;` block, which must also be closed with `end;`.
 
 <h3>Repeat Loops: </h3>
 
-Below is an example of a repeat loop:
+Here’s an example of a repeat loop:
 
 ```
 repeat ( 10 ) i; then;
@@ -73,13 +73,13 @@ repeat ( 10 ) i; then;
   end;
 ```
 
-After the repeat statement and an expression describing the number of times the loop should repeat, you must declare an index variable. This index variable holds the number of times the loop as run. Anything wrapped within the "then;" and "end;" statements is within the repeat loop.
+After `repeat` and an expression defining the number of times to loop, you define an index variable (e.g., `i`) that keeps track of the iteration count. Everything between `then;` and `end;` is inside the loop.
 
 <h3>Print Statements: </h3>
 
-"print" and "printLine" both allow you to print to the console. "print" prints the given text without creating a new line. "printLine" prints the given text and creates a new line.
+Use `print` and `printLine` to display text in the console. `print` does not add a new line, `while` printLine does.
 
-Below are examples of "print" and "printLine":
+Example:
 
 ```
 print ( "hello" );
@@ -88,9 +88,9 @@ printLine ( "Hi" );
 
 <h3>User Input: </h3>
 
-You can get user input from the console by using "input." After the "input" keyword, provide a text variable whose contents will be set to the user input.
+Use `input` to get user input from the console. Assign the input to a text variable. The content within the given text variable will be replaced with the user input.
 
-Below is an example:
+Example:
 
 ```
 text name = ( "" );
@@ -101,14 +101,16 @@ input name;
 printLine ( "Hello " + name + "!" );
 ```
 
-<h3>Characters Within String: </h3>
+<h3>Characters Within Strings: </h3>
 
-You can get a specific character within a string using "characterAt." There is three parts to characterAt. After the "characterAt" keyword, provide a text variable whose content will be replaced with the character. After that, provide an expression which describes the index of the character you want to get. Finally, provide an expression of the text you want to select the character from. 
+Use `characterAt` to get a specific character from a string. Provide:
+- The variable to store the result
+- The index of the character as an expression
+- The text to extract from as an expression
 
-Below is an example:
-
+Example:
 ```
-text name ( "Daniel" );
+text name = ( "Daniel" );
 text character = ( "" );
 
 characterAt character ( 0 ) ( name );
@@ -118,9 +120,9 @@ printLine ( "The first letter of your name is: " + character );
 
 <h3>Exiting: </h3>
 
-The "exit" key word allows you to immediately terminate the program.
+Use the `exit` keyword to immediately terminate the program.
 
-In the below example, "Hello" will not be printed since "exit" stops the program before the print statement.
+In this example, "Hello" will not be printed as the program is terminated before the print statement:
 
 ```
 exit;
