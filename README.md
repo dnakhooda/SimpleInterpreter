@@ -35,7 +35,9 @@ Variables are declared by writing the type, the variable name, an equals sign, a
 Here are some examples:
 ```simple
 text hello = ( "hi" );
+
 bool yes = ( TRUE );
+
 num age = ( 18 );
 ```
 
