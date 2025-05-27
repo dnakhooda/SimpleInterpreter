@@ -1,4 +1,4 @@
-<h1>🖥️☕ Simple Interpreter ☕🖥️</h1>
+<h1>🖥️ ☕ Simple Interpreter ☕ 🖥️</h1>
 
 <p>
 This is an interpreter written in Java for my custom programming language, which I named "Simple." The Simple language supports variables, if statements, loops, and more.
@@ -15,7 +15,7 @@ This is an interpreter written in Java for my custom programming language, which
 Inside the executable folder, you’ll find `SimpleInterpreter.jar`. This JAR file can be used to run my interpreter. Since the interpreter is built in Java, you’ll need Java installed on your system.
 
 After downloading `SimpleInterpreter.jar`, open a terminal in the same folder as the JAR file and run the following command:
-```
+```bash
 java -jar SimpleInterpreter.jar
 ```
 
@@ -33,7 +33,7 @@ There are three types of variables in Simple:
 Variables are declared by writing the type, the variable name, an equals sign, and an expression.
 
 Here are some examples:
-```
+```simple
 text hello = ( "hi" );
 bool yes = ( TRUE );
 num age = ( 18 );
@@ -49,7 +49,7 @@ Every statement ends with a semicolon (`;`).
 
 Here’s an example of an if statement:
 
-```
+```simple
 num age = ( 30 );
 if ( age > 65 ); then;
   printLine ( "Hello elderly person!" );
@@ -67,7 +67,7 @@ Use `then;` to begin the if block and `end;` to close it. Optionally, you can in
 
 Here’s an example of a repeat loop:
 
-```
+```simple
 repeat ( 10 ) i; then;
   printLine ( i );
   end;
@@ -81,7 +81,7 @@ Use `print` and `printLine` to display text in the console. `print` does not add
 
 Example:
 
-```
+```simple
 print ( "hello" );
 printLine ( "Hi" );
 ```
@@ -92,7 +92,7 @@ Use `input` to get user input from the console. Assign the input to a text varia
 
 Example:
 
-```
+```simple
 text name = ( "" );
 
 print ( "Type your name: " );
@@ -109,7 +109,7 @@ Use `characterAt` to get a specific character from a string. Provide:
 - The text to extract from as an expression
 
 Example:
-```
+```simple
 text name = ( "Daniel" );
 text character = ( "" );
 
@@ -124,7 +124,7 @@ Use the `exit` keyword to immediately terminate the program.
 
 In this example, "Hello" will not be printed as the program is terminated before the print statement:
 
-```
+```simple
 exit;
 
 printLine ( "Hello" );
