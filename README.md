@@ -4,13 +4,13 @@
 This is an interpreter written in Java for my custom programming language, which I named "Simple." The Simple language supports variables, if statements, loops, and more.
 </p>
 
-<h2>Demo 📹</h2>
+<h2>Demo</h2>
 
 <a href="https://youtu.be/2GUfb232a9I">
   Click here for a video demo 📹
 </a>
 
-<h2>How You Can Run It 🏃</h2>
+<h2>How You Can Run It</h2>
 
 Inside the executable folder, you’ll find `SimpleInterpreter.jar`. This JAR file can be used to run my interpreter. Since the interpreter is built in Java, you’ll need Java installed on your system.
 
@@ -21,7 +21,7 @@ java -jar SimpleInterpreter.jar
 
 The interpreter will prompt you for the name of the `.simple` file you want to run. This repository includes several example programs you can try: `main.simple`, `greeting.simple`, `wordGuesser.simple`, and `hangman.simple`.
 
-<h2>Simple Programming Language Features 🖥️</h2>
+<h2>Simple Programming Language Features</h2>
 
 <h3>Variables: </h3>
 
@@ -41,7 +41,7 @@ bool yes = ( TRUE );
 num age = ( 18 );
 ```
 
-⚠️ Note: Parentheses are required around expressions. They tell the interpreter that the value should or could be evaluated. Spaces are also required.
+Note: Parentheses are required around expressions. They tell the interpreter that the value should or could be evaluated. Spaces are also required.
 
 Text values must be wrapped in quotation marks (e.g., `"hi"`).
 
@@ -61,7 +61,7 @@ else; then;
   end;
 ```
 
-⚠️ Be sure to include the parentheses in the expression after the `if` keyword, as well as spaces.
+Be sure to include the parentheses in the expression after the `if` keyword, as well as spaces.
 
 Use `then;` to begin the if block and `end;` to close it. Optionally, you can include an `else; then;` block, which must also be closed with `end;`.
 
