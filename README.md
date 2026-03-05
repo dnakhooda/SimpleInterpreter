@@ -1,4 +1,4 @@
-<h1>🖥️ ☕ Simple Interpreter ☕ 🖥️</h1>
+<h1>Simple Interpreter </h1>
 
 <p>
 This is an interpreter written in Java for my custom programming language, which I named "Simple." The Simple language supports variables, if statements, loops, and more.
@@ -7,7 +7,7 @@ This is an interpreter written in Java for my custom programming language, which
 <h2>Demo</h2>
 
 <a href="https://youtu.be/2GUfb232a9I">
-  Click here for a video demo 📹
+  Click here for a video demo 
 </a>
 
 <h2>How You Can Run It</h2>
